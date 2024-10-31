@@ -36,10 +36,8 @@ export const Column = ({ id, tasks, children }: ColumnProps) => {
         sx={{
           maxHeight: "92%",
           overflowY: "auto",
-          pr: 2,
         }}
       >
-        
         {tasks.map((task) => (
           <Task key={task._id} task={task} />
         ))}
