@@ -1,3 +1,5 @@
+"use client";
+
 import store from "@/redux/store";
 import theme from "@/styles/muiTheme";
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";

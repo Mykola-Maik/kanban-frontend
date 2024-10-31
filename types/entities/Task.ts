@@ -1,7 +1,7 @@
 export type Status = "in_progress" | "completed" | "open";
 
 export interface Task {
-  _id: number;
+  _id: string;
   title: string;
   description: string;
   assignee: string;

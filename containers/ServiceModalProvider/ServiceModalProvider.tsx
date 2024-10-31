@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import { ServiceModalName } from "@/enums";
 import { selectServiceModals } from "@/redux/selectors";
