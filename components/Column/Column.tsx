@@ -25,14 +25,25 @@ export const Column = ({ id, tasks, children }: ColumnProps) => {
         backgroundColor: "#f8f8f8",
         border: "1px solid #ddd",
         borderRadius: "4px",
-        width: "250px",
+        width: "450px",
         minHeight: "300px",
       }}
     >
-      <Typography variant="h3">{children}</Typography>
-      {tasks.map((task) => (
-        <Task key={task._id} task={task} />
-      ))}
+      <Typography variant="h4" sx={{ marginBottom: "8px" }}>
+        {children}
+      </Typography>
+      <Box
+        sx={{
+          maxHeight: "92%",
+          overflowY: "auto",
+          pr: 2,
+        }}
+      >
+        
+        {tasks.map((task) => (
+          <Task key={task._id} task={task} />
+        ))}
+      </Box>
     </Box>
   );
 };
