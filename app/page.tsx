@@ -22,6 +22,8 @@ export default function Home() {
         fill
         style={{ objectFit: "cover" }}
         priority
+        placeholder="blur"
+        blurDataURL="/home-bg.webp"
       />
 
       <Box

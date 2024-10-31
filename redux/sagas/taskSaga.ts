@@ -19,11 +19,8 @@ function* getAllTasksSaga() {
       "/todos"
     );
 
-    console.log(response.data);
-
     yield put(getAllTasksSuccess(response.data));
   } catch (error) {
-    console.log("SAGA CATCH");
     if (error instanceof AxiosError) {
       console.error(error);
       yield put(getAllTasksFailure(error.message));
@@ -50,7 +47,6 @@ function* updateTaskStatusSaga({
 
     yield put(updateTaskStatusSuccess({ taskId, newStatus }));
   } catch (error) {
-    console.log("SAGA CATCH");
     if (error instanceof AxiosError) {
       console.error(error);
       yield put(updateTaskStatusFailure(error.message));

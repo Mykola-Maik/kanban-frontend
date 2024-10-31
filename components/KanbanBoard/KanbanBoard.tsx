@@ -18,7 +18,6 @@ export function KanbanBoard() {
   const tasks = useAppSelector((state) => state.taskSlice.taskStatuses);
 
   const [activeTodo, setActiveTodo] = useState<Task | null>(null);
-  console.log(tasks);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -32,8 +31,6 @@ export function KanbanBoard() {
       )
     );
     const toColumn = over.id as Status;
-
-    console.log(toColumn);
 
     if (fromColumn && toColumn && fromColumn !== toColumn) {
       const activeTask = tasks[fromColumn as keyof TaskStatuses].find(
